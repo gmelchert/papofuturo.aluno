@@ -1,8 +1,53 @@
+<style>
+    @media (max-width: 951px) {
+        .cabecalho h1 {
+            font-size: 3em;
+        }
+
+        .cabecalho h2 {
+            font-size: 2em;
+        }
+    }
+
+    @media (max-width: 698px) {
+        .cabecalho h1 {
+            font-size: 2em;
+        }
+
+        .cabecalho h2 {
+            font-size: 1.5em;
+        }
+    }
+
+    @media (min-width: 952px) {
+        .cabecalho h1 {
+            font-size: 3.5em;
+        }
+
+        .cabecalho h2 {
+            font-size: 2.5em;
+        }
+    }
+
+    @media (max-width: 389px) {
+        .cabecalho h1 {
+            font-size: 1.5em;
+        }
+
+        .cabecalho h2 {
+            font-size: 1.2em;
+        }
+    }
+</style>
+
 <div class="cabecalho d-flex flex-column justify-content-center align-items-center fw-bold">
     <h1 class="text-white">Formulário de Cadastro.</h1>
     <h2 class="text-white">*Campos obrigatórios</h2>
 
-    
+    <div class="w-100 bgc-2 p-5 rounded-3 mt-10 container">
+        <div class="row" id="formulario">
+        </div>
+    </div>
 </div>
 
 <script>

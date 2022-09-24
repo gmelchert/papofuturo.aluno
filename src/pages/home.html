@@ -46,18 +46,54 @@
         background-color: #56558E
     }
 
+    #smallInput {
+        display: none;
+    }
+
+    @media (max-width: 389px) {
+        .busca-cpf {
+            width: 90%
+        }
+
+        .cabecalho h1 {
+            font-size: 2em;
+        }
+
+        .cabecalho h2 {
+            font-size: 1.2em;
+        }
+
+        #largeInput { 
+            display: none;
+        }
+
+        #smallInput {
+            display: flex;
+        }
+    }
+
+    #mensagemSemCadastro {
+        display: none;
+    }
+
 </style>
 
 <div class="cabecalho d-flex flex-column justify-content-center align-items-center fw-bold">
     <h1 class="text-white">Bem-vindo!</h1>
     <h2 class="text-white">Por favor, digite seu cpf abaixo.</h2>
 
-    <div class="mt-5 busca-cpf">
-        <div class="input-group mb-3">
-            <input type="text" class="form-control cpf" placeholder="ex: 123.456.789-10" aria-label="Campo para busca de CPF">
+    <div class="mt-5 busca-cpf d-flex flex-column justify-content-center align-items-center">
+        <div class="input-group mb-3" id="largeInput">
+            <input type="text" id="cpfBuscaLg" class="form-control cpf" placeholder="123.456.789-10" aria-label="Campo para busca de CPF">
             <button class="btn bgc-2 text-white" type="button" onclick="searchCpf()">Buscar</button>
         </div>
-        <div class="">
+
+        <div class="input-group input-group-sm mb-3" id="smallInput">
+            <input type="text" id="cpfBuscaSm" class="form-control cpf" placeholder="123.456.789-10" aria-label="Campo para busca de CPF">
+            <button class="btn bgc-2 text-white" type="button" onclick="searchCpf()">Buscar</button>
+        </div>
+
+        <div id="mensagemSemCadastro">
             <p class="text-danger d-flex align-items-baseline">*Não tem cadastro? <button class="btn text-danger" onclick="loadPage('register')">Clique aqui.</button></p>
         </div>
         
