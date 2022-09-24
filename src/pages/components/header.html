@@ -1,0 +1,64 @@
+<style>
+    .site-navbar {
+        margin-bottom: 0px;
+        width: 100%;
+        background-image: linear-gradient(to right, #040431, #56558E, #040431);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: antiquewhite;
+    }
+
+    .nav-link:hover {
+        text-decoration: none;
+        background-color: #0B0A49;
+        color: white;
+    }
+
+    .site-menu {
+        display: flex;
+    }
+
+    .site-menu li a {
+        text-decoration: none;
+        color: antiquewhite;
+        font-size: large;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .site-menu li a:hover {
+        text-decoration: none;
+        color: antiquewhite;
+        background-color: #040431;
+    }
+
+    .site-menu li {
+        margin: 0rem 0.2rem;
+        list-style-type: none;
+    }
+</style>
+
+<header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-6 col-md-3 d-block">
+                <h1 class="mb-0 site-logo">
+                    <a href="javascript:redirect()" class="text-black h2 mb-0">
+                        <img src="src/images/logo-papo-futuro-primary.png" height="50" />
+                    </a>
+                </h1>
+            </div>
+
+            <div class="col-6 col-md-9 d-flex align-items-center justify-content-end">
+                <ul class="site-menu">
+                    <li><a href="javascript:loadPage('home')">Home</a></li>
+                    <li><a href="javascript:loadPage('register')">Cadastrar-se</a></li>
+                    <li><a href="javascript:loadPage('admin')">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>

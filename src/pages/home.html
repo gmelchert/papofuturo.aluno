@@ -76,20 +76,26 @@
         display: none;
     }
 
+    .header button:hover {
+        transition: all 0.2s linear;
+        transform: scale(1.1);
+    }
+
 </style>
 
 <div class="cabecalho d-flex flex-column justify-content-center align-items-center fw-bold">
+    
     <h1 class="text-white">Bem-vindo!</h1>
     <h2 class="text-white">Por favor, digite seu cpf abaixo.</h2>
 
     <div class="mt-5 busca-cpf d-flex flex-column justify-content-center align-items-center">
         <div class="input-group mb-3" id="largeInput">
-            <input type="text" id="cpfBuscaLg" class="form-control cpf" placeholder="123.456.789-10" aria-label="Campo para busca de CPF">
+            <input type="text" id="cpfBuscaLg" class="form-control cpf" placeholder="12345678910" aria-label="Campo para busca de CPF">
             <button class="btn bgc-2 text-white" type="button" onclick="searchCpf()">Buscar</button>
         </div>
 
         <div class="input-group input-group-sm mb-3" id="smallInput">
-            <input type="text" id="cpfBuscaSm" class="form-control cpf" placeholder="123.456.789-10" aria-label="Campo para busca de CPF">
+            <input type="text" id="cpfBuscaSm" class="form-control cpf" placeholder="12345678910" aria-label="Campo para busca de CPF">
             <button class="btn bgc-2 text-white" type="button" onclick="searchCpf()">Buscar</button>
         </div>
 

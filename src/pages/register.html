@@ -1,31 +1,19 @@
 <style>
     @media (max-width: 951px) {
         .cabecalho h1 {
-            font-size: 3em;
-        }
-
-        .cabecalho h2 {
             font-size: 2em;
         }
     }
 
     @media (max-width: 698px) {
         .cabecalho h1 {
-            font-size: 2em;
-        }
-
-        .cabecalho h2 {
-            font-size: 1.5em;
+            font-size: 1.8em;
         }
     }
 
     @media (min-width: 952px) {
         .cabecalho h1 {
-            font-size: 3.5em;
-        }
-
-        .cabecalho h2 {
-            font-size: 2.5em;
+            font-size: 3em;
         }
     }
 
@@ -33,19 +21,34 @@
         .cabecalho h1 {
             font-size: 1.5em;
         }
+    }
 
-        .cabecalho h2 {
-            font-size: 1.2em;
-        }
+    .btn:hover {
+        background-color: #1B1A60;
+        transition: all 0.2s linear;
+        transform: scale(1.1);
+    }
+
+    .bg-opacity {
+        background-color: #3433776b;
     }
 </style>
 
 <div class="cabecalho d-flex flex-column justify-content-center align-items-center fw-bold">
     <h1 class="text-white">Formulário de Cadastro.</h1>
-    <h2 class="text-white">*Campos obrigatórios</h2>
 
-    <div class="w-100 bgc-2 p-5 rounded-3 mt-10 container">
+    <div class="w-100 p-5 rounded-3 mt-10 container bg-opacity">
+        <div class="row">
+            <div class="col">
+                <p class="text-white">*Campos obrigatórios</p>
+            </div>
+        </div>
         <div class="row" id="formulario">
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <button class="btn bgc-4 text-white" onclick="postRegister()">Enviar cadastro</button>
+            </div>
         </div>
     </div>
 </div>

@@ -1,7 +1,10 @@
+* {
+    font-family: Verdana, sans-serif;
+}
+
 body {
     margin: 0px;
-    font-family: Verdana, sans-serif;
-    background-image: linear-gradient(to bottom, #1B1A60, #000020);
+    background-image: linear-gradient(to bottom, #343377, #000);
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
@@ -31,6 +34,6 @@ body {
     background-color: #040431
 }
 
-.text-white {
-    color: #FFFFFF
+.nav a:hover {
+    background-color: #56558E;
 }
