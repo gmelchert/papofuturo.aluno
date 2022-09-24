@@ -1,0 +1,32 @@
+body {
+    margin: 0px;
+    font-family: Verdana, sans-serif;
+    background-image: linear-gradient(to bottom, #1B1A60, #000020);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.bgc-1 {
+    background-color: #56558E
+}
+
+.bgc-2 {
+    background-color: #343377
+}
+
+.bgc-3 {
+    background-color: #1B1A60
+}
+
+.bgc-4 {
+    background-color: #0B0A49
+}
+
+.bgc-5 {
+    background-color: #040431
+}
+
+.text-white {
+    color: #FFFFFF
+}

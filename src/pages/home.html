@@ -1,0 +1,69 @@
+<style>
+
+    @media (max-width: 951px) {
+        .busca-cpf {
+            width: 75%
+        }
+
+        .cabecalho h1 {
+            font-size: 4em;
+        }
+
+        .cabecalho h2 {
+            font-size: 2em;
+        }
+    }
+
+    @media (max-width: 698px) {
+        .busca-cpf {
+            width: 85%
+        }
+
+        .cabecalho h1 {
+            font-size: 3em;
+        }
+
+        .cabecalho h2 {
+            font-size: 1.5em;
+        }
+    }
+
+    @media (min-width: 952px) {
+        .busca-cpf {
+            width: 50%
+        }
+
+        .cabecalho h1 {
+            font-size: 5em;
+        }
+
+        .cabecalho h2 {
+            font-size: 3em;
+        }
+    }
+
+    .btn:hover {
+        background-color: #56558E
+    }
+
+</style>
+
+<div class="cabecalho d-flex flex-column justify-content-center align-items-center fw-bold">
+    <h1 class="text-white">Bem-vindo!</h1>
+    <h2 class="text-white">Por favor, digite seu cpf abaixo.</h2>
+
+    <div class="mt-5 busca-cpf">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control cpf" placeholder="ex: 123.456.789-10" aria-label="Campo para busca de CPF">
+            <button class="btn bgc-2 text-white" type="button" onclick="searchCpf()">Buscar</button>
+        </div>
+        <div class="">
+            <p class="text-danger d-flex align-items-baseline">*Não tem cadastro? <button class="btn text-danger" onclick="loadPage('register')">Clique aqui.</button></p>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    $(document.body).append(`\x3Cscript src="src/components/home.js?version=${FILE_VERSION}">\x3C/script>`)
+</script>
