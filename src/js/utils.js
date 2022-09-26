@@ -155,3 +155,11 @@ function loadComponent(page, id) {
         )
         .catch(() => alerta(`Falha ao carregar página: ${page}`, 'erro'))
 }
+
+function capsFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function logout() {
+    loadPage('home')
+}

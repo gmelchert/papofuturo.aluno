@@ -1,7 +1,7 @@
 <style>
 
     @media (max-width: 951px) {
-        .busca-cpf {
+        .campo-busca {
             width: 75%
         }
 
@@ -15,12 +15,12 @@
     }
 
     @media (max-width: 698px) {
-        .busca-cpf {
+        .campo-busca {
             width: 85%
         }
 
         .cabecalho h1 {
-            font-size: 3em;
+            font-size: 2.2em;
         }
 
         .cabecalho h2 {
@@ -29,7 +29,7 @@
     }
 
     @media (min-width: 952px) {
-        .busca-cpf {
+        .campo-busca {
             width: 50%
         }
 
@@ -51,12 +51,12 @@
     }
 
     @media (max-width: 389px) {
-        .busca-cpf {
+        .campo-busca {
             width: 90%
         }
 
         .cabecalho h1 {
-            font-size: 2em;
+            font-size: 1.7em;
         }
 
         .cabecalho h2 {
@@ -76,27 +76,62 @@
         display: none;
     }
 
-    .header button:hover {
+    .login:hover {
         transition: all 0.2s linear;
         transform: scale(1.1);
+    }
+
+    .logout-message {
+        color: #ac3333;
+    }
+
+    .logout-message a {
+        color: #ac3333;
+        margin-left: 0.5rem;
+        text-decoration: none;
+        padding: 0.5rem;
+    }
+
+    .logout-message a:hover {
+        color: #e39999;
+        /* font-size: large; */
+        transition: all 0.2s linear;
+        background-color: #ac3333;
+        border-radius: 1rem;
+    }
+
+    .loginDiv {
+        display: flex;
     }
 
 </style>
 
 <div class="cabecalho d-flex flex-column justify-content-center align-items-center fw-bold">
     
-    <h1 class="text-white">Bem-vindo!</h1>
-    <h2 class="text-white">Por favor, digite seu cpf abaixo.</h2>
+    <h1 class="text-white">Bem-vindo<span id="nomeAluno"></span>!</h1>
+    <h2 class="text-white" id="subtitle">Por favor, digite seu CPF abaixo.</h2>
 
-    <div class="mt-5 busca-cpf d-flex flex-column justify-content-center align-items-center">
-        <div class="input-group mb-3" id="largeInput">
-            <input type="text" id="cpfBuscaLg" class="form-control cpf" placeholder="12345678910" aria-label="Campo para busca de CPF">
+    <div class="mt-5 campo-busca d-flex flex-column justify-content-center align-items-center">
+        <div class="input-group mb-3 searchInputDiv" id="largeInput">
+            <input type="text" id="cpfBuscaLg" class="form-control cpf" placeholder="123.456.789-10" aria-label="Campo para busca de CPF">
             <button class="btn bgc-2 text-white" type="button" onclick="searchCpf()">Buscar</button>
         </div>
 
-        <div class="input-group input-group-sm mb-3" id="smallInput">
-            <input type="text" id="cpfBuscaSm" class="form-control cpf" placeholder="12345678910" aria-label="Campo para busca de CPF">
+        <div class="input-group input-group-sm mb-3 searchInputDiv" id="smallInput">
+            <input type="text" id="cpfBuscaSm" class="form-control cpf" placeholder="123.456.789-10" aria-label="Campo para busca de CPF">
             <button class="btn bgc-2 text-white" type="button" onclick="searchCpf()">Buscar</button>
+        </div>
+
+        <div class="mb-3 w-100" id="senhaDiv">
+            <label for="senha" class="form-label text-white">Senha</label>
+            <input type="password" class="form-control" id="senha" placeholder="********">
+        </div>
+
+        <input type="hidden" name="" id="cpfHidden">
+
+        <div class=" align-items-center justify-content-around w-100 loginDiv">
+            <span class="logout-message">Não é você? <a href="javascript:logout()">Clique aqui.</a></span>
+            <button class="btn login text-white bgc-2" onclick="login()">Login</button>
         </div>
 
         <div id="mensagemSemCadastro">
